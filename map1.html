@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Interactive Web Mapping</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body data-map="rates">
+  <!-- Map Title -->
+  <div id="title">COVID 19 Rates in the US (2020)</div>
+  <div id="subtitle">Cases per 1000 residents</div>
+
+  <!-- Map Container -->
+  <div id="map"></div>
+
+  <!-- Legend -->
+  <div id="legend"></div>
+
+  <!-- Supplementary Information -->
+  <div id="metadata" style="position:absolute; bottom:20px; left:20px; background:white; padding:10px; border-radius:6px; max-width:350px; font-size:12pt; line-height:1.4;">
+    <strong>Map Description:</strong> This interactive map shows COVID 19 case rates across U.S. counties in 2020. Hover over a county to see exact rates along with the county name.<br><br>
+
+    <strong>Users:</strong> researchers, policymakers, and the general public.<br><br>
+
+    <strong>Data Sources:</strong><br>
+    - COVID 19 case rates: <a href="https://github.com/nytimes/covid-19-data/blob/43d32dde2f87bd4dafbb7d23f5d9e878124018b8/live/us-counties.csv" target="_blank">The New York Times</a><br>
+    - Population Data Used to Calulate COVID 19 rates: <a href = "https://data.census.gov/table/ACSDP5Y2018.DP05?g=0100000US$050000&d=ACS+5-Year+Estimates+Data+Profiles&hidePreview=true" target="_blank"> 2018 ACS 5 year estimates</a><br>
+    - The U.S. county boundary shapefile was downloaded from: <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html" target="_blank"> the U.S. Census Bureau.</a><br>
+    <strong>Author:</strong> Yosef Birri<br>
+    <strong>Map Projection:</strong> Web Mercator (EPSG:3857)<br>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
